@@ -1,0 +1,22 @@
+<div class="flex flex-col justify-center items-center px-20 h-80">
+  <h1 class="text-5xl font-bold">wellcome to blog section</h1>
+  <p class="w-60/12">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aut officia
+    nisi harum odio fugit excepturi dolores! Tempora sequi impedit voluptates,
+    recusandae at eveniet porro consequatur? Modi molestias quia, incidunt hic
+    reiciendis accusantium ad ipsam soluta voluptatibus recusandae temporibus
+    nulla omnis quisquam nesciunt nemo sapiente fuga laboriosam consectetur odit
+    eligendi!omnis quisquam nesciunt nemo sapiente fuga laboriosam consectetur
+    odit eligendi!
+  </p>
+</div>
+<div class="flex flex-col items-center px-20 mb-10">
+  <h2 class="text-9xl font-bold">Featured blogs</h2>
+  <div class="flex flex-wrap gap-4">
+    @for(blog of featuredBlogs; track $index){
+    <div class="w-3/12">
+      <app-blog-card [blog]="blog"></app-blog-card>
+    </div>
+    }
+  </div>
+</div>

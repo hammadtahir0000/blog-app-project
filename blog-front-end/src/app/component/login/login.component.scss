@@ -1,0 +1,119 @@
+// Variables
+$primary-color: #43a047; // Green used for the sign-in button
+$input-border-color: #ccc; // Light grey border color for inputs
+$input-focus-color: #673ab7; // Purple focus color for inputs
+$background-color-left: #e8f5e9; // Light green for the left background
+$background-color-right: #ffffff; // White for the right background
+$text-color: #333; // Dark text color
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Main Container
+.login-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f5f5f5;
+
+  .login-left, .login-right {
+    width: 50%;
+    padding: 2rem;
+  }
+
+  // Left Side
+  .login-left {
+    background-color: $background-color-left;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    .logo {
+      @include flex-center;
+      width: 100%;
+      margin-bottom: 2rem;
+      font-size: 1.5rem;
+      color: $text-color;
+      
+      mat-icon {
+        font-size: 2rem;
+        margin-right: 0.5rem;
+      }
+    }
+
+    .login-image {
+      @include flex-center;
+      flex: 1;
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  // Right Side
+  .login-right {
+    background-color: $background-color-right;
+    @include flex-center;
+
+    .login-box {
+      width: 80%;
+      max-width: 400px;
+      
+      h1 {
+        margin-bottom: 2rem;
+        font-size: 2rem;
+        color: $text-color;
+      }
+
+      .input-field {
+        width: 100%;
+        margin-bottom: 1.5rem;
+
+        mat-form-field {
+          width: 100%;
+          
+          .mat-form-field-appearance-outline .mat-form-field-outline {
+            border-color: $input-border-color;
+          }
+          
+          .mat-form-field-appearance-outline .mat-form-field-outline-thick {
+            border-color: $primary-color;
+          }
+          
+          .mat-form-field-label {
+            color: $text-color;
+          }
+          
+          .mat-input-element {
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid $input-border-color;
+            font-size: 1rem;
+            color: $text-color;
+          }
+          
+          .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
+            border-color: $input-focus-color;
+          }
+          
+          .mat-form-field-appearance-outline.mat-form-field-invalid .mat-form-field-outline-thick {
+            border-color: red;
+          }
+        }
+      }
+
+      .login-button {
+        width: 100%;
+        height: 50px;
+        background-color: $primary-color;
+        color: #fff;
+        font-size: 1rem;
+        border-radius: 4px;
+      }
+    }
+  }
+}

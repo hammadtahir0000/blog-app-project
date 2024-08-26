@@ -1,0 +1,45 @@
+.header {
+    background: linear-gradient(to right, #3b82f6, #1d4ed8); // Gradient background
+    padding: 0 1.5rem;
+    @media (min-width: 768px) {
+      padding: 0 5rem;
+    }
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); // Enhanced shadow
+    border-radius: 0 0 0.75rem 0.75rem; // Rounded bottom corners
+  
+    .title {
+      font-size: 1.875rem;
+      font-weight: 800; // Extra bold
+      color: white;
+      cursor: pointer;
+      letter-spacing: 0.1rem;
+      transition: color 0.3s ease;
+      &:hover {
+        color: #d1d5db; // Light gray on hover
+      }
+    }
+  
+    ul {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+  
+      li {
+        a {
+          color: white;
+          font-size: 1.125rem;
+          font-weight: 500;
+          transition: color 0.3s ease, text-decoration 0.3s ease;
+          &:hover {
+            color: #d1d5db; // Light gray on hover
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  

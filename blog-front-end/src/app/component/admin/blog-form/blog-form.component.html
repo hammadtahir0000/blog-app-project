@@ -1,0 +1,85 @@
+<div class="p-8 bg-gray-100 shadow-lg rounded-lg max-w-lg mx-auto">
+   
+    <form [formGroup]="blogForm" class="space-y-6 w-full">
+
+      @if(isEdit){
+        <h1>Edit the blog</h1>
+      }
+      @else{
+        <h1>create blog</h1>
+      }
+       
+
+        <div class="w-full">
+          <mat-form-field class="w-full">
+            <mat-label>category id</mat-label>
+            <mat-select formControlName="categoryId"  >
+              @for(item  of categoryList;track $index){
+                <mat-option [value]="item.id">{{item.name}} </mat-option>
+              }
+             
+              
+             
+            </mat-select>
+          </mat-form-field>
+        </div>
+      <!-- Title -->
+      <div class="w-full">
+        <mat-form-field class="w-full">
+          <input matInput type="text" placeholder=" " id="title" class="peer input-field"  formControlName="tital" required />
+          <mat-label class="input-label">Title</mat-label>
+        </mat-form-field>
+      </div>
+  
+      <!-- Description -->
+      <div class="w-full">
+        <mat-form-field class="w-full">
+          <input matInput type="text" placeholder=" " id="description" class="peer input-field"  formControlName="decripation"  required />
+          <mat-label class="input-label">Description</mat-label>
+        </mat-form-field>
+      </div>
+  
+      <!-- Image -->
+      <div class="w-full">
+        <mat-form-field class="w-full">
+          <input matInput type="text" placeholder=" " id="image" class="peer input-field"    formControlName="image" required />
+          <mat-label class="input-label">Image</mat-label>
+        </mat-form-field>
+      </div>
+  
+      <!-- Content -->
+      <div class="w-full">
+        <mat-form-field class="w-full">
+          <textarea matInput placeholder=" " id="content" class="peer input-field" rows="4"   formControlName="contant" required></textarea>
+          <mat-label class="input-label">Content</mat-label>
+        </mat-form-field>
+      </div>
+  
+      <!-- Is Featured -->
+      <div class="w-full">
+        
+          <mat-checkbox class="example-margin"  formControlName="isFeatured" >is featured</mat-checkbox>
+       
+      </div>
+  
+      <!-- Submit Button -->
+       @if(isEdit){
+        <div class="w-full">
+          <button mat-raised-button color="primary" [disabled]="blogForm.invalid" (click)="update()" class="w-full py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition-all duration-300">
+            update
+          </button>
+        </div>
+       }@else{
+        <div class="w-full">
+          <button mat-raised-button color="primary" [disabled]="blogForm.invalid" (click)="create()" class="w-full py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 transition-all duration-300">
+            Create
+          </button>
+        </div>
+       }
+     
+
+      
+    </form>
+  </div>
+  
+ 

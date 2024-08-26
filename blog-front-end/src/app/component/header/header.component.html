@@ -1,0 +1,54 @@
+<!-- <div class="bg-blue-500 px-6 md:px-20 h-20 flex justify-between items-center shadow-md">
+  <span class="text-3xl md:text-4xl font-bold !text-white tracking-wide" routerLink="/" class="cursor-pointer">My Blog App</span>
+  <ul class="flex gap-8">
+    <li>
+      <a routerLink="/blogs" class="text-white text-lg font-medium hover:underline transition-colors duration-300">Blogs</a>
+    </li>
+    <li>
+      <a routerLink="/about" class="text-white text-lg font-medium hover:underline transition-colors duration-300">About Us</a>
+    </li>
+    @if(authService.isLoggedIn){
+      <li>
+        <a routerLink="/admin/blogs" class="text-white text-lg font-medium hover:underline transition-colors duration-300">Manage blogs</a>
+      </li>
+    }
+    
+  </ul>
+</div> -->
+<div class="bg-gradient-to-r from-blue-500 to-blue-700 px-6 md:px-20 h-20 flex justify-between items-center shadow-lg rounded-b-lg">
+  <span 
+    class="text-3xl md:text-4xl font-extrabold text-white tracking-wider cursor-pointer hover:text-gray-200 transition-colors duration-300" 
+    routerLink="/"
+  >
+    My Blog App
+  </span>
+  <ul class="flex gap-8 items-center">
+    <li>
+      <a 
+        routerLink="/blogs" 
+        class="text-white text-lg font-medium hover:text-gray-200 hover:underline transition-colors duration-300"
+      >
+        Blogs
+      </a>
+    </li>
+    <li>
+      <a 
+        routerLink="/about" 
+        class="text-white text-lg font-medium hover:text-gray-200 hover:underline transition-colors duration-300"
+      >
+        About Us
+      </a>
+    </li>
+    <!-- Conditional Rendering using *ngIf -->
+    @if(authService.isLoggedIn){
+    <li >
+      <a 
+        routerLink="/admin/blogs" 
+        class="text-white text-lg font-medium hover:text-gray-200 hover:underline transition-colors duration-300"
+      >
+        Manage Blogs
+      </a>
+    </li>
+  }
+  </ul>
+</div>
