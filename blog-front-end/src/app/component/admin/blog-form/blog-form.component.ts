@@ -66,7 +66,7 @@ create() {
 console.log(this.blogForm.value);
 let model:any=this.blogForm.value;
 this.blogService.addBlog(model as Blog).subscribe(()=>{
-  alert('blog is created sexfully');
+  alert('blog is created successfully');
   this.router.navigateByUrl("/admin/blogs");
 });
   // const model = this.blogForm.value;
@@ -85,7 +85,7 @@ update(){
   console.log(this.blogForm.value);
 let model:any=this.blogForm.value;
 this.blogService.updateBlog(this.blogForm.value.id!,  model as Blog).subscribe(()=>{
-  alert('blog is updated sexfully');
+  alert('blog is updated successfully');
   this.router.navigateByUrl("/admin/blogs");
 });
  

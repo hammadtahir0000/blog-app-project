@@ -12,7 +12,7 @@
 }@else{
     <p>looding----</p>
 } -->
-@if(blog){
+<!-- @if(blog){
     <div class="flex flex-col px-8 py-12 space-y-10 bg-gray-50 min-h-screen">
         <div class="flex itembaseline gap-4">
             <h1 class="text-6xl font-bold font-extrabold text-gray-900">{{blog.tital}}</h1>
@@ -31,4 +31,26 @@
 }@else{
     <p class="text-center text-gray-500 py-20">Loading...</p>
 }
+ -->
 
+ @if(blog) {
+    <div class="container">
+      <div class="blog-header">
+        <h1 class="blog-title">{{ blog.tital }}</h1>
+        <span class="category-badge">
+          {{ getCategoryName() }}
+        </span>
+      </div>
+      
+      <img
+        [src]="blog.image"
+        alt="Blog Image"
+        class="blog-image"
+      />
+      
+      <div class="blog-content" [innerHTML]="blog.contant"></div>
+    </div>
+  } @else {
+    <p class="loading-message">Loading...</p>
+  }
+  

@@ -1,0 +1,45 @@
+/* Form Field and Input Styling */
+.mat-form-field-appearance-outline .mat-form-field-flex,
+.mat-input-element,
+.mat-checkbox-inner-container {
+  background-color: #ffffff !important; /* White background for all input elements */
+}
+
+.mat-input-element,
+.mat-form-field-label,
+.mat-select-value-text,
+.mat-checkbox-label {
+  color: #000000 !important; /* Black text color */
+}
+
+.mat-form-field-appearance-outline .mat-form-field-outline-start,
+.mat-form-field-appearance-outline .mat-form-field-outline-end,
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  border-color: #cccccc !important; /* Light gray border */
+}
+
+.mat-form-field.mat-form-field-invalid .mat-input-element,
+.mat-form-field.mat-form-field-invalid .mat-form-field-label {
+  color: #ff0000 !important; /* Red color for error state */
+}
+
+.mat-form-field .mat-placeholder-required {
+  color: #ff0000 !important; /* Red asterisk for required fields */
+}
+
+/* Custom Checkbox Styling */
+.custom-checkbox .mat-checkbox-label {
+  color: #000000 !important; /* Black text color for checkbox label */
+}
+
+.custom-checkbox .mat-checkbox-inner-container {
+  background-color: #ffffff !important; /* White background for checkbox */
+}
+
+.custom-checkbox .mat-checkbox-frame {
+  border-color: #000000 !important; /* Black border for checkbox */
+}
+
+.custom-checkbox .mat-checkbox-background {
+  background-color: #000000 !important; /* Black background when checked */
+}

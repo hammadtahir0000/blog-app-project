@@ -1,0 +1,89 @@
+/* Container Styling */
+.container {
+    padding: 2rem 4rem;
+    background-color: #f8f9fa; // Light gray for a clean look
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Header Styling */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #343a40; // Dark gray for the title
+  }
+  
+  /* Button Styling */
+  button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+  
+  /* Filter Field Styling */
+  .filter-field {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  
+  /* Table Container Styling */
+  .table-container {
+    background-color: #ffffff; // White background for the table container
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Table Header and Cells Styling */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  
+    th {
+      background-color: #e9ecef; // Light gray background for headers
+      color: #495057; // Dark gray text color for headers
+      padding: 1rem;
+      text-align: left;
+      font-weight: 600;
+    }
+  
+    td {
+      padding: 1rem;
+      color: #ffffff; // Dark gray for data
+    }
+  
+    .mat-header-cell, .mat-cell {
+      border-bottom: 1px solid #dee2e6; // Light border color
+    }
+  }
+  
+  /* Table Row Hover Effect */
+  tr.mat-row:hover {
+    background-color: #f1f3f5; // Very light gray on hover
+  }
+  
+  /* No Data Row Styling */
+  .mat-no-data-row {
+    text-align: center;
+    font-style: italic;
+    color: #ffffff; // Gray color for no data message
+    padding: 1rem;
+  }
+  
+  /* Paginator Styling */
+  mat-paginator {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+  }
+  

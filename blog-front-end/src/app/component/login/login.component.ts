@@ -37,7 +37,7 @@ export class LoginComponent {
         this.router.navigateByUrl("/admin/blogs")
       })
     }else{
-      alert('abya bsdk si email and password dal na');
+      alert('Email and password is Incorrect');
     }
   }
 }

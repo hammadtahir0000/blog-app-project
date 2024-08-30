@@ -1,4 +1,4 @@
-<mat-card class="example-card" appearance="outlined">
+<!-- <mat-card class="example-card" appearance="outlined">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>{{blog.tital}}   <span class=" bg-green-600 text-white font-bold p-1 rounded-mg  shadow-md">
@@ -16,4 +16,29 @@
       <button mat-button [routerLink]="'/blog/'+blog.id" >read more</button>
      
     </mat-card-actions>
+  </mat-card> -->
+
+
+  <mat-card class="custom-card" appearance="outlined">
+    <mat-card-header>
+      <div mat-card-avatar class="header-image"></div>
+      <mat-card-title>
+        {{ blog.tital }}
+        <span  style="
+        margin-left: 15px;
+    " class="category-tag">
+          {{ getCategoryName() }}
+        </span>
+      </mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>
+        {{ blog.decripation }}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" [routerLink]="'/blog/' + blog.id">Read More</button>
+    </mat-card-actions>
   </mat-card>
+  

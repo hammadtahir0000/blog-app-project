@@ -1,0 +1,110 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: #f9fafb; // Light background color
+    min-height: 100vh;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 1rem; // Rounded corners for the container
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .blog-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .blog-title {
+    font-size: 2.5rem; // Adjusted for better readability
+    font-family: 'Roboto', sans-serif; // Modern sans-serif font
+    font-weight: 700;
+    color: #111827; // Dark gray color for the title
+    margin: 0;
+  }
+  
+  .category-badge {
+    background-color: #34d399; // Green color
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif; // Consistent font family
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 9999px; // Rounded badge
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .blog-image {
+    width: 100%;
+    max-width: 1000px; // Adjusted max width for image
+    height: auto;
+    margin: 0 auto;
+    border-radius: 1rem; // Rounded corners
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  
+    &:hover {
+      transform: scale(1.05); // Slight zoom effect on hover
+    }
+  }
+  
+  .blog-content {
+    font-size: 1.125rem; // Larger text for readability
+    font-family: 'Georgia', serif; // Elegant serif font for content
+    color: #374151; // Dark gray color
+    line-height: 1.75;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff; // Background for content area
+    border-radius: 0.5rem; // Rounded corners for the content area
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  
+    h2, h3, h4 {
+      font-family: 'Roboto', sans-serif; // Consistent font family for headings
+      color: #111827; // Dark gray color for headings
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+  
+    p {
+      margin-bottom: 1.5rem; // Increased spacing between paragraphs
+      line-height: 1.8; // Improved line height for readability
+    }
+  
+    a {
+      color: #2563eb; // Link color
+      text-decoration: underline;
+  
+      &:hover {
+        color: #1d4ed8; // Darker shade on hover
+      }
+    }
+  
+    blockquote {
+      border-left: 4px solid #e0e0e0; // Light gray border
+      padding-left: 1rem;
+      margin: 1rem 0;
+      font-style: italic;
+      color: #6b7280; // Gray color
+      background-color: #f1f5f9; // Light background for blockquotes
+      border-radius: 0.5rem;
+      padding: 1rem;
+    }
+  
+    ul, ol {
+      margin-left: 2rem; // Indentation for lists
+      margin-bottom: 1.5rem;
+    }
+  }
+  
+  .loading-message {
+    text-align: center;
+    color: #6b7280; // Gray color
+    padding: 5rem;
+    font-family: 'Roboto', sans-serif; // Consistent font family
+  }
+  

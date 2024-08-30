@@ -1,4 +1,4 @@
-<div class="flex flex-col justify-center items-center px-20 h-80">
+<!-- <div class="flex flex-col justify-center items-center px-20 h-80">
   <h1 class="text-5xl font-bold">wellcome to blog section</h1>
   <p class="w-60/12">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aut officia
@@ -15,6 +15,25 @@
   <div class="flex flex-wrap gap-4">
     @for(blog of featuredBlogs; track $index){
     <div class="w-3/12">
+      <app-blog-card [blog]="blog"></app-blog-card>
+    </div>
+    }
+  </div>
+</div> -->
+<!-- Welcome Section -->
+<div class="welcome-section">
+  <h1 class="welcome-title">Welcome to the Blog Section</h1>
+  <p class="welcome-description">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis aut officia nisi harum odio fugit excepturi dolores! Tempora sequi impedit voluptates, recusandae at eveniet porro consequatur? Modi molestias quia, incidunt hic reiciendis accusantium ad ipsam soluta voluptatibus recusandae temporibus nulla omnis quisquam nesciunt nemo sapiente fuga laboriosam consectetur odit eligendi!
+  </p>
+</div>
+
+<!-- Featured Blogs Section -->
+<div class="featured-blogs">
+  <h2 class="featured-title">Featured Blogs</h2>
+  <div class="featured-blogs-grid">
+    @for(blog of featuredBlogs; track $index){
+    <div class="blog-card">
       <app-blog-card [blog]="blog"></app-blog-card>
     </div>
     }

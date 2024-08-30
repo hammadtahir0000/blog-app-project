@@ -1,4 +1,4 @@
-<div class="login-container">
+<!-- <div class="login-container">
     <div class="login-left">
       <div class="logo">
      
@@ -31,4 +31,33 @@
 
 
 
+ -->
 
+
+ <div class="login-container d-flex">
+  <div class="login-left d-flex flex-column align-items-center justify-content-center">
+    <div class="logo mb-4">
+      <!-- Add your logo here -->
+     
+    </div>
+    <div class="login-image">
+      <img src="../../../assets/login-image.png" alt="Login Image" class="img-fluid" />
+    </div>
+  </div>
+  <div class="login-right d-flex align-items-center justify-content-center">
+    <div class="login-box p-4 bg-white shadow rounded">
+      <h1 class="mb-4 text-center">Log in</h1>
+      <form>
+        <div class="mb-3">
+          <label for="email" class="form-label">Username or email</label>
+          <input type="email" class="form-control" id="email"  name="email"  placeholder="username@example.com" [(ngModel)]="email" />
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input formC type="password" class="form-control" id="password"  name="password" placeholder="********" [(ngModel)]="password" />
+        </div>
+        <button type="button" class="btn btn-primary w-100" (click)="login()">Sign In</button>
+      </form>
+    </div>
+  </div>
+</div>
